@@ -1,5 +1,6 @@
 from urllib import request
 from urllib.parse import quote
+from urllib import parse
 import json
 from PIL import Image
 import numpy as np
@@ -26,11 +27,13 @@ class Network(QObject):
         requestData['data'] = data
         requestData = json.dumps(requestData)
         print(requestData)
-        finalurl = '%s%s?args=%s' % (URL, port, requestData)
+        finalurl = '%s%s' % (URL, port)
         print(finalurl)
-        finalurl = quote(finalurl, safe='=/:?&')
-        print(finalurl)
-        out = request.urlopen(finalurl)
+        args = {'args':requestData}
+        args = parse.urlencode(args).encode(encoding='utf-8')
+        print(args)
+        req = request.Request(url=finalurl, data=args)
+        out = request.urlopen(req)
         out = out.read().decode('utf-8')
         print(out)
         return out

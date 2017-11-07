@@ -93,7 +93,7 @@
     </size>
    </property>
    <property name="windowTitle">
-    <string>Properties</string>
+    <string>标注工具</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -102,7 +102,7 @@
   </widget>
   <widget class="QDockWidget" name="dockAnnotations">
    <property name="windowTitle">
-    <string>Annotations</string>
+    <string>图片列表</string>
    </property>
    <attribute name="dockWidgetArea">
     <number>1</number>
@@ -110,6 +110,9 @@
    <widget class="QWidget" name="dockAnnotationsContents"/>
   </widget>
   <widget class="QDockWidget" name="dockInformation">
+   <property name="windowTitle">
+    <string>病例信息</string>
+   </property>
    <attribute name="dockWidgetArea">
     <number>2</number>
    </attribute>
@@ -121,7 +124,7 @@
      <normaloff>:/icons/folder_table.png</normaloff>:/icons/folder_table.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Open</string>
+    <string>打开</string>
    </property>
    <property name="statusTip">
     <string>Open existing annotation file</string>
@@ -148,7 +151,7 @@
      <normaloff>:/icons/disk.png</normaloff>:/icons/disk.png</iconset>
    </property>
    <property name="text">
-    <string>&amp;Save</string>
+    <string>保存</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
@@ -184,7 +187,7 @@
      <normaloff>:/icons/arrow_right.png</normaloff>:/icons/arrow_right.png</iconset>
    </property>
    <property name="text">
-    <string>Next</string>
+    <string>下一张</string>
    </property>
   </action>
   <action name="actionPrevious">
@@ -193,7 +196,7 @@
      <normaloff>:/icons/arrow_left.png</normaloff>:/icons/arrow_left.png</iconset>
    </property>
    <property name="text">
-    <string>Previous</string>
+    <string>上一张</string>
    </property>
   </action>
   <action name="actionZoom_In">
@@ -202,7 +205,7 @@
      <normaloff>:/icons/zoom_in.png</normaloff>:/icons/zoom_in.png</iconset>
    </property>
    <property name="text">
-    <string>Zoom In</string>
+    <string>放大</string>
    </property>
   </action>
   <action name="actionZoom_Out">
@@ -211,7 +214,7 @@
      <normaloff>:/icons/zoom_out.png</normaloff>:/icons/zoom_out.png</iconset>
    </property>
    <property name="text">
-    <string>Zoom Out</string>
+    <string>缩小</string>
    </property>
   </action>
   <action name="actionLogin">
@@ -220,7 +223,7 @@
      <normaloff>:/icons/door_in.png</normaloff>:/icons/door_in.png</iconset>
    </property>
    <property name="text">
-    <string>Login</string>
+    <string>登陆</string>
    </property>
   </action>
   <action name="actionLogoff">
@@ -229,7 +232,7 @@
      <normaloff>:/icons/door_out.png</normaloff>:/icons/door_out.png</iconset>
    </property>
    <property name="text">
-    <string>Logoff</string>
+    <string>登出</string>
    </property>
   </action>
   <action name="actionMask">
@@ -271,7 +274,7 @@
      <normaloff>:/icons/disk_multiple.png</normaloff>:/icons/disk_multiple.png</iconset>
    </property>
    <property name="text">
-    <string>Submit</string>
+    <string>提交</string>
    </property>
    <property name="iconText">
     <string>Submit</string>
