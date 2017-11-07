@@ -186,7 +186,7 @@ class PolygonItem(BaseItem):
         self.setPen(pen)
         self._opacity = 0.6
 
-        self.createMenu()
+        # self.createMenu()
 
     def __call__(self, model_item=None, parent=None):
         item = PolygonItem(model_item, parent)
@@ -300,25 +300,25 @@ class PolygonItem(BaseItem):
         self._opacity = value
         self.update()
 
-    def contextMenuEvent(self, event):
-        self.menu.exec_(QCursor.pos())
+    # def contextMenuEvent(self, event):
+    #     self.menu.exec_(QCursor.pos())
+    #
+    # def createMenu(self):
+    #     self.menu = QMenu();
+    #     self.actionGroup = QActionGroup(self.menu)
+    #     for i in config.LABELS:
+    #         itemclass = i['attributes']['class']
+    #         if itemclass != 'Eraser':
+    #             action = self.menu.addAction(itemclass)
+    #         self.actionGroup.addAction(action)
+    #     self.actionGroup.triggered.connect(self.onMenuAction)
 
-    def createMenu(self):
-        self.menu = QMenu();
-        self.actionGroup = QActionGroup(self.menu)
-        for i in config.LABELS:
-            itemclass = i['attributes']['class']
-            if itemclass != 'Eraser':
-                action = self.menu.addAction(itemclass)
-            self.actionGroup.addAction(action)
-        self.actionGroup.triggered.connect(self.onMenuAction)
-
-    @pyqtSlot()
-    def onMenuAction(self, action):
-        self._model_item.update({
-            self.prefix() + 'class': str(action.text()),
-        })
-        color = config.COLORMAP[self._model_item['class']]
-        brush = QBrush(QColor(color[0], color[1], color[2], 255), Qt.SolidPattern)
-        self.setBrush(brush)
+    # @pyqtSlot()
+    # def onMenuAction(self, action):
+    #     self._model_item.update({
+    #         self.prefix() + 'class': str(action.text()),
+    #     })
+    #     color = config.COLORMAP[self._model_item['class']]
+    #     brush = QBrush(QColor(color[0], color[1], color[2], 255), Qt.SolidPattern)
+    #     self.setBrush(brush)
 
