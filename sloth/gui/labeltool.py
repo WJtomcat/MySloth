@@ -172,7 +172,7 @@ class MainWindow(QMainWindow):
 
     def onSubmit(self):
         print(self.tool.annotations())
-        out = self.network.labelUpload(self.tool.annotations(), isSubmit=False)
+        out = self.network.labelUpload(self.tool.annotations(), isSubmit=True)
         if out:
             self.tool.clearAnnotations()
 

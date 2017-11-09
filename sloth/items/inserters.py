@@ -303,7 +303,6 @@ class FreehandItemInserter(PolylineItemInserter):
         if self._item is not None:
             self._scene.removeItem(self._item)
             self._item = None
-            self._scene.clearMessage()
         ItemInserter.abort(self)
 
     def _removeLastPointAndFinish(self, image_item):
