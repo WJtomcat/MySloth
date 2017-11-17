@@ -3,6 +3,8 @@ from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from types import *
 
+dataSetId = 12
+
 class CaseListDialog(QDialog):
     def __init__(self, network, tool, parent=None):
         QDialog.__init__(self, parent)
@@ -85,6 +87,7 @@ class CaseListDialog(QDialog):
         data = {}
         data['pageSize'] = pageSize
         data['currentPage'] = currentPage
+        data['dataSetId'] = dataSetId
         out = self.network.sendRequest('caseList', data)
         out = self.network.processData(out)
         self.model.clear()
