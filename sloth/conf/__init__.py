@@ -2,6 +2,12 @@ import os
 import sys
 import importlib
 from sloth.conf import default_config
+import json
+
+print(os.getcwd())
+
+f = open("../conf/tojson.json", 'r')
+f = json.load(f)
 
 
 class Config:
@@ -10,6 +16,10 @@ class Config:
         for setting in dir(default_config):
             if setting == setting.upper():
                 setattr(self, setting, getattr(default_config, setting))
+        for (key,setting) in f.items():
+            if key==key.upper():
+                setattr(self, key, setting)
+
 
     def update(self, module_path):
         try:
@@ -29,5 +39,6 @@ class Config:
             if setting == setting.upper():
                 setting_value = getattr(mod, setting)
                 setattr(self, setting, setting_value)
+
 
 config = Config()

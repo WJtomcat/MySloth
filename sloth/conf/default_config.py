@@ -33,79 +33,79 @@
 #                    class.
 #
 #   - 'text' : (optional) A label for the item's GUI button.
-LABELS = (
-    {
-        'attributes': {
-            'class':    'TZ',
-        },
-        'inserter': 'sloth.items.FreehandItemInserter',
-        'item':     'sloth.items.PolygonItem',
-        'hotkey':   't',
-        'text':     'TZ(t)',
-    },
-    {
-        'attributes': {
-            'class':    'SCJ',
-        },
-        'inserter': 'sloth.items.FreehandItemInserter',
-        'item':     'sloth.items.PolygonItem',
-        'hotkey':   's',
-        'text':     'SCJ(s)',
-    },
-    {
-        'attributes': {
-            'class':    'CIS',
-        },
-        'inserter': 'sloth.items.FreehandItemInserter',
-        'item':     'sloth.items.PolygonItem',
-        'hotkey':   'c',
-        'text':     'CIS(c)',
-    },
-    {
-        'attributes': {
-            'class':    'CIGN',
-        },
-        'inserter': 'sloth.items.FreehandItemInserter',
-        'item':     'sloth.items.PolygonItem',
-        'hotkey':   'g',
-        'text':     'CIGN(g)',
-    },
-    {
-        'attributes': {
-            'class':    'PUN',
-        },
-        'inserter': 'sloth.items.FreehandItemInserter',
-        'item':     'sloth.items.PolygonItem',
-        'hotkey':   'p',
-        'text':     'PUN(p)',
-    },
-    {
-        'attributes': {
-            'class':    'MOS',
-        },
-        'inserter': 'sloth.items.FreehandItemInserter',
-        'item':     'sloth.items.PolygonItem',
-        'hotkey':   'm',
-        'text':     'MOS(m)',
-    },
-    {
-        'attributes': {
-            'class':    'AE',
-        },
-        'inserter': 'sloth.items.FreehandItemInserter',
-        'item':     'sloth.items.PolygonItem',
-        'hotkey':   'a',
-        'text':     'AE(a)',
-    },
-    {
-        'attributes': {
-            'class':    'Eraser',
-        },
-        'inserter': 'sloth.items.FreehandEraser',
-        'hotkey':   'Ctrl+e',
-        'text':     'Eraser(e)',
-    },
-)
+# LABELS = (
+#     {
+#         'attributes': {
+#             'class':    'TZ',
+#         },
+#         'inserter': 'sloth.items.FreehandItemInserter',
+#         'item':     'sloth.items.PolygonItem',
+#         'hotkey':   't',
+#         'text':     'TZ(t)',
+#     },
+#     {
+#         'attributes': {
+#             'class':    'SCJ',
+#         },
+#         'inserter': 'sloth.items.FreehandItemInserter',
+#         'item':     'sloth.items.PolygonItem',
+#         'hotkey':   's',
+#         'text':     'SCJ(s)',
+#     },
+#     {
+#         'attributes': {
+#             'class':    'CIS',
+#         },
+#         'inserter': 'sloth.items.FreehandItemInserter',
+#         'item':     'sloth.items.PolygonItem',
+#         'hotkey':   'c',
+#         'text':     'CIS(c)',
+#     },
+#     {
+#         'attributes': {
+#             'class':    'CIGN',
+#         },
+#         'inserter': 'sloth.items.FreehandItemInserter',
+#         'item':     'sloth.items.PolygonItem',
+#         'hotkey':   'g',
+#         'text':     'CIGN(g)',
+#     },
+#     {
+#         'attributes': {
+#             'class':    'PUN',
+#         },
+#         'inserter': 'sloth.items.FreehandItemInserter',
+#         'item':     'sloth.items.PolygonItem',
+#         'hotkey':   'p',
+#         'text':     'PUN(p)',
+#     },
+#     {
+#         'attributes': {
+#             'class':    'MOS',
+#         },
+#         'inserter': 'sloth.items.FreehandItemInserter',
+#         'item':     'sloth.items.PolygonItem',
+#         'hotkey':   'm',
+#         'text':     'MOS(m)',
+#     },
+#     {
+#         'attributes': {
+#             'class':    'AE',
+#         },
+#         'inserter': 'sloth.items.FreehandItemInserter',
+#         'item':     'sloth.items.PolygonItem',
+#         'hotkey':   'a',
+#         'text':     'AE(a)',
+#     },
+#     {
+#         'attributes': {
+#             'class':    'Eraser',
+#         },
+#         'inserter': 'sloth.items.FreehandEraser',
+#         'hotkey':   'Ctrl+e',
+#         'text':     'Eraser(e)',
+#     },
+# )
 
 def color_map(N=256):
     def bitget(byteval, idx):
@@ -132,7 +132,7 @@ def getcolormap():
         colormap[label] = color
     return colormap
 
-COLORMAP = getcolormap()
+
 
 
 # HOTKEYS
@@ -143,6 +143,7 @@ COLORMAP = getcolormap()
 # should expect a single parameter, the labeltool object.  The optional
 # third entry -- if present -- is expected to be a string describing the
 # action.
+
 HOTKEYS = (
     ('Space',     [lambda lt: lt.currentImage().confirmAll(),
                    lambda lt: lt.currentImage().setUnlabeled(False),

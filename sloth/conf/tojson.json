@@ -1,0 +1,118 @@
+{
+    "COLORMAP": {
+        "AE": [
+            64,
+            0,
+            0
+        ],
+        "CIGN": [
+            128,
+            0,
+            128
+        ],
+        "CIS": [
+            0,
+            0,
+            128
+        ],
+        "Eraser": [
+            128,
+            0,
+            0
+        ],
+        "MOS": [
+            128,
+            128,
+            128
+        ],
+        "PUN": [
+            0,
+            128,
+            128
+        ],
+        "SCJ": [
+            128,
+            128,
+            0
+        ],
+        "TZ": [
+            0,
+            128,
+            0
+        ]
+    },
+    "LABELS": [
+        {
+            "attributes": {
+                "class": "TZ"
+            },
+            "hotkey": "t",
+            "inserter": "sloth.items.FreehandItemInserter",
+            "item": "sloth.items.PolygonItem",
+            "text": "TZ(t)"
+        },
+        {
+            "attributes": {
+                "class": "SCJ"
+            },
+            "hotkey": "s",
+            "inserter": "sloth.items.FreehandItemInserter",
+            "item": "sloth.items.PolygonItem",
+            "text": "SCJ(s)"
+        },
+        {
+            "attributes": {
+                "class": "CIS"
+            },
+            "hotkey": "c",
+            "inserter": "sloth.items.FreehandItemInserter",
+            "item": "sloth.items.PolygonItem",
+            "text": "CIS(c)"
+        },
+        {
+            "attributes": {
+                "class": "CIGN"
+            },
+            "hotkey": "g",
+            "inserter": "sloth.items.FreehandItemInserter",
+            "item": "sloth.items.PolygonItem",
+            "text": "CIGN(g)"
+        },
+        {
+            "attributes": {
+                "class": "PUN"
+            },
+            "hotkey": "p",
+            "inserter": "sloth.items.FreehandItemInserter",
+            "item": "sloth.items.PolygonItem",
+            "text": "PUN(p)"
+        },
+        {
+            "attributes": {
+                "class": "MOS"
+            },
+            "hotkey": "m",
+            "inserter": "sloth.items.FreehandItemInserter",
+            "item": "sloth.items.PolygonItem",
+            "text": "MOS(m)"
+        },
+        {
+            "attributes": {
+                "class": "AE"
+            },
+            "hotkey": "a",
+            "inserter": "sloth.items.FreehandItemInserter",
+            "item": "sloth.items.PolygonItem",
+            "text": "AE(a)"
+        },
+        {
+            "attributes": {
+                "class": "Eraser"
+            },
+            "hotkey": "Ctrl+e",
+            "inserter": "sloth.items.FreehandEraser",
+            "text": "Eraser(e)"
+        }
+    ],
+    "DATASETID": 12
+}

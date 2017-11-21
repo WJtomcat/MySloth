@@ -2,8 +2,9 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
 from types import *
+from sloth.conf import config
 
-dataSetId = 12
+dataSetId = config.DATASETID
 
 class CaseListDialog(QDialog):
     def __init__(self, network, tool, parent=None):
