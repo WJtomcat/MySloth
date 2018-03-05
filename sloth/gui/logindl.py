@@ -102,7 +102,7 @@ class ValidatePic(QLabel):
         self.setPixmap(pic)
 
     def getValidatePic(self, username):
-        url = 'http://wx.wangtiansoft.com:9090/blcj/mrtApi/picVerifyCode?username=%s' % (username)
+        url = 'http://115.159.237.230:8086/mrtApi/picVerifyCode?username=%s' % (username)
         print(url)
         pic = urlopen(url)
         print(pic)
@@ -127,4 +127,3 @@ def toQImage(im, copy=False):
             elif im.shape[2] == 4:
                 qim = QImage(im.data, im.shape[1], im.shape[0], im.strides[0], QImage.Format_ARGB32)
                 return qim.copy() if copy else qim
-

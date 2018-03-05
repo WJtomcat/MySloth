@@ -7,7 +7,7 @@ import numpy as np
 import hashlib
 from PyQt5.QtCore import *
 
-URL = 'http://wx.wangtiansoft.com:9090/blcj/mrtApi/'
+URL = 'http://115.159.237.230:8086/mrtApi/'
 
 class Network(QObject):
     caseChanged = pyqtSignal(object)
@@ -152,8 +152,3 @@ class Network(QObject):
             myhash.update(b)
         hex = myhash.hexdigest()
         return hex
-
-
-
-
-
