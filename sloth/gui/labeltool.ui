@@ -277,7 +277,7 @@
     <string>提交</string>
    </property>
    <property name="iconText">
-    <string>Submit</string>
+    <string>提交</string>
    </property>
   </action>
   <action name="action_About">

@@ -1,3 +1,4 @@
+#coding=utf-8
 import os
 from PyQt5.QtWidgets import QMainWindow, QMessageBox, QWidget, QVBoxLayout
 from PyQt5.QtCore import QSettings, QVariant, QSize, QPoint, QObject
@@ -142,14 +143,17 @@ class MainWindow(QMainWindow):
         self.treeview.setSelectionModel(self.selectionmodel)
         self.treeview.selectionModel().currentChanged.connect(self.tool.setCurrentImage)
 
+    def clear(self):
+        self.tool.clearAnnotations()
+
     def login(self):
         if self.network.isLogin():
             if not self.okToContinue():
                 return
             else:
                 reply = QMessageBox.question(self,
-                        "Unsaved Changes",
-                        'WJ',
+                        u"提示",
+                        u'是否退出当前登陆？',
                         QMessageBox.Yes | QMessageBox.No)
                 if reply == QMessageBox.No:
                     return
@@ -160,6 +164,7 @@ class MainWindow(QMainWindow):
             return
         if not self.okToContinue():
             return
+        self.clear()
         self.network.logOff()
         self.onModelDirtyChanged(False)
 
@@ -196,8 +201,8 @@ class MainWindow(QMainWindow):
     def okToContinue(self):
         if self.tool.model().dirty():
             reply = QMessageBox.question(self,
-                    "message",
-                    'Save Unsaved changes?',
+                    u"保存标注提示",
+                    u'是否保存更改?',
                     QMessageBox.Yes|QMessageBox.No|QMessageBox.Cancel)
             if reply == QMessageBox.Cancel:
                 return False

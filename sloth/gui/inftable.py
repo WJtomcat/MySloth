@@ -1,3 +1,4 @@
+#coding=utf-8
 from PyQt5.QtWidgets import *
 import json
 
@@ -5,19 +6,21 @@ class CaseInformationWidget(QWidget):
     def __init__(self, tool, parent=None):
         QWidget.__init__(self, parent)
         self.caseInf = QTextEdit()
-        self.caseInf.setEnabled(False)
+        self.caseInf.setReadOnly(True)
+        # self.caseInf.setEnabled(False)
         self.imageInf = QTextEdit()
-        self.imageInf.setEnabled(False)
+        self.imageInf.setReadOnly(True)
+        # self.imageInf.setEnabled(False)
         self.tool = tool
         self.setupGui()
 
     def setupGui(self):
-        self.casebox = QGroupBox('Case')
+        self.casebox = QGroupBox(u'病例信息')
         self.case_layout = QVBoxLayout()
         self.case_layout.addWidget(self.caseInf)
         self.casebox.setLayout(self.case_layout)
 
-        self.imagebox = QGroupBox('Image')
+        self.imagebox = QGroupBox(u'图像信息')
         self.image_layout = QVBoxLayout()
         self.image_layout.addWidget(self.imageInf)
         self.imagebox.setLayout(self.image_layout)
@@ -49,5 +52,3 @@ class CaseInformationWidget(QWidget):
             tmp = i + ':' + str(items[i]) + '\n'
             ann = ann+tmp
         self.imageInf.setText(ann)
-
-
