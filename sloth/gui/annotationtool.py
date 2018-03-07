@@ -151,22 +151,22 @@ class ImageThread(Thread, QObject):
     #     hex = myhash.hexdigest()
     #     return hex == self.image['md5']
 
-    def run(self):
-        print('start download', self.picId)
-        (pic, hex) = self.network.downloadPic(self.picId)
-        while True:
-            if hex == 0:
-                self.pic = pic
-                self._isLoaded = True
-                self.imageLoaded.emit()
-                self.image.setSeen()
-                print('download done', self.picId)
-                return
-            else:
-                print('pic wrong')
-                self.wrongFlag += 1
-                if self.wrongFlag >= 3:
-                    return
+    # def run(self):
+    #     print('start download', self.picId)
+    #     (pic, hex) = self.network.downloadPic(self.picId)
+    #     while True:
+    #         if hex == 0:
+    #             self.pic = pic
+    #             self._isLoaded = True
+    #             self.imageLoaded.emit()
+    #             self.image.setSeen()
+    #             print('download done', self.picId)
+    #             return
+    #         else:
+    #             print('pic wrong')
+    #             self.wrongFlag += 1
+    #             if self.wrongFlag >= 3:
+    #                 return
 
     def run(self):
         self.wrongFlag = 0
@@ -188,4 +188,3 @@ class ImageThread(Thread, QObject):
 
     def isLoaded(self):
         return self._isLoaded
-

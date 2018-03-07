@@ -157,6 +157,8 @@ class MainWindow(QMainWindow):
                         QMessageBox.Yes | QMessageBox.No)
                 if reply == QMessageBox.No:
                     return
+                else:
+                    self.logoff()
         self.logindl.showDialog()
 
     def logoff(self):
